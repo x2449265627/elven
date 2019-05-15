@@ -16,7 +16,7 @@ class Math{
 			}else{
 				$arr[$value] = 1;
 			}
-			if($arr[$value] >= 3 ){
+			if($arr[$value] >=		 3 ){
 				return $value;
 			}
 			
