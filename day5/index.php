@@ -31,3 +31,13 @@ $math = new Math();
 $res = $math->GetUglyNumber_Solution(7);
 echo $res;
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript"></script>
