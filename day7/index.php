@@ -1,14 +1,38 @@
-<?php 
-class math{
-   public function ReverseSentence($str){
-       $arr = explode(' ',$str);
-       $count = count($arr)-1;
-       for($i=$count;$i>=0;$i--){
-       	echo $arr[$i].' ';
-       }
-   }
+
+<?php 	
+
+class Db{
+	private static $db;
+	private $yy = '22';
+	private function __construct(){
+        new PDO("mysql:dbname=dianshang;host=127.0.0.1",'root','root');
+
+	}
+
+
+
+	public static function getDb(){
+		$res = $this->yy;
+		var_dump($res);
+        if (!(self::$db instanceof Db)) {
+        	// echo 1;die;
+            self::$db = new Db();
+        }
+       
+        return self::$db;
+	}
+
+
+
+
+
+	private function __clone(){
+
+	}
+
 }
-$str = "student. a am I";
-$math = new math();
-$math->ReverseSentence($str);
- ?>
+
+ 
+$res = Db::getDB();
+var_dump($res);
+?>
